@@ -77,6 +77,13 @@ include "includes/crear.inc.php";
             </div>
         </div>
 
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">Img</label>
+            <div class="col-sm-6">
+                <input type="file" class="form-control" name="img" value="<?php echo $img; ?>">
+            </div>
+        </div>
+
         <?php
             if(!empty($successMessage)){
                 echo "
@@ -92,7 +99,7 @@ include "includes/crear.inc.php";
             <div class="offset-sm-3 col-sm-3 d-grid">
                 <button class="btn btn-primary">Submit</button>
             </div>
-            <div class="offset-sm-3 col-sm-3 d-grid">
+            <div class="col-sm-3 d-grid">
                 <a class="btn btn-outline-primary" href="inventario.php">Cancelar</a>
             </div>
         </div>

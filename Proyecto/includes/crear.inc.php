@@ -7,6 +7,7 @@
     $vol = "";
     $precioCaja = "";
     $precioUnidad = "";
+    $img = "";
 
     $errorMessage = "";
     $successMessage = "";
@@ -19,17 +20,18 @@
         $vol = $_POST["vol"];
         $precioCaja = $_POST["precioCaja"];
         $precioUnidad = $_POST["precioUnidad"];
+        $img = $_POST["img"];
 
         do{
             if(empty($sap) || empty($nombre) || empty($tipo) || empty($uxc) || empty($vol)
-            || empty($precioCaja) || empty($precioUnidad)){
+            || empty($precioCaja) || empty($precioUnidad) || empty($img)){
                 $errorMessage="Debe de llenar todos los campos";
                 break;
             }
 
             // insertar producto en la base de datos
-            $sql = "INSERT INTO productos (sap, nombre, tipo, uxc, vol, precioCaja, precioUnidad)" .
-                    "VALUES ('$sap', '$nombre', '$tipo', '$uxc', '$vol', '$precioCaja', '$precioUnidad')";
+            $sql = "INSERT INTO productos (sap, nombre, tipo, uxc, vol, precioCaja, precioUnidad, img)" .
+                    "VALUES ('$sap', '$nombre', '$tipo', '$uxc', '$vol', '$precioCaja', '$precioUnidad', '$img')";
             $result = $con->query($sql);
 
             if(!$result){
@@ -44,6 +46,7 @@
             $vol = "";
             $precioCaja = "";
             $precioUnidad = "";
+            $img = "";
 
             $errorMessage = "";
 

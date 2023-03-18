@@ -22,13 +22,16 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th></th>
                     <th>SAP</th>
                     <th>Nombre</th>
+                    <!-- <th data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content = "<img src='img/Cinzano Gran Dolce.jpeg' height='200px'>" >Hola</th> -->
                     <th>Tipo</th>
                     <th>UXC</th>
                     <th>Vol</th>
                     <th>Precio Caja</th>
                     <th>Precio Unidad</th>
+                    <th class="text-center">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -41,18 +44,19 @@
                 while($row = mysqli_fetch_assoc($result)){
                     echo "
                     <tr>
-                    <td>$row[sap]</td>
-                    <td>$row[nombre]</td>
-                    <td>$row[tipo]</td>
-                    <td>$row[uxc]</td>
-                    <td>$row[vol]</td>
-                    <td>$row[precioCaja]</td>
-                    <td>$row[precioUnidad]</td>
-                    <td>
-                        <a class='btn btn-primary btn-sm' href='editar.php?id=$row[id]'>Editar</a>
-                        <a class='btn btn-danger btn-sm' href='eliminar.php?id=$row[id]'>Eliminar</a>
-                        <a class='btn btn-warning btn-sm' href='agregarCarro.php?id=$row[id]'>Agregar al Carro</a>
-                    </td>
+                        <td><img src='img/$row[img]' width='100px'></td>
+                        <td class='align-middle'>$row[sap]</td>
+                        <th class='align-middle'>$row[nombre]</td>
+                        <td class='align-middle'>$row[tipo]</td>
+                        <td class='align-middle'>$row[uxc]</td>
+                        <td class='align-middle'>$row[vol]</td>
+                        <td class='align-middle'>$row[precioCaja]</td>
+                        <td class='align-middle'>$row[precioUnidad]</td>
+                        <td class='text-center align-middle'>
+                            <a class='btn btn-primary btn-sm' href='editar.php?id=$row[id]'>Editar</a>
+                            <a class='btn btn-danger btn-sm' href='eliminar.php?id=$row[id]'>Eliminar</a>
+                            <a class='btn btn-warning btn-sm' href='agregarCarro.php?id=$row[id]'>Agregar al Carro</a>
+                        </td>
                     </tr>";
                 }
             ?>
@@ -60,89 +64,10 @@
         </table>
 
     </div>
-<!--
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-            <?php
-                include "includes/crear.inc.php";
-            ?>
-            <div class="container my-2">
-                <h2>Nuevo Producto</h2>
-                <form method="post">
-
-                <?php
-                    if(!empty($errorMessage)){
-                        echo "
-                        <div class='alert alert-warning alert-dismissible fade show' role='aler'>
-                            <strong>$errorMessage</strong>
-                            <button type='button' class='btn btn-close' date-bs-dismiss='alert' aria-label='Close'></button>
-                        </div>
-                        ";
-                    }
-                ?>
-
-                <div class="row mb-3">
-                    <label class="col-sm-3 col-form-laber">Nombre</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label class="col-sm-3 col-form-laber">Email</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label class="col-sm-3 col-form-laber">Phone</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="phone" value="<?php echo $phone; ?>">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label class="col-sm-3 col-form-laber">Address</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="address" value="<?php echo $address; ?>">
-                    </div>
-                </div>
-
-                <?php
-                    if(!empty($successMessage)){
-                        echo "
-                        <div class='alert alert-warning alert-dismissible fade show' role='aler'>
-                            <strong>$successMessage</strong>
-                            <button type='button' class='btn btn-close' date-bs-dismiss='alert' aria-label='Close'></button>
-                        </div>
-                        ";
-                    }
-                ?>
-
-                <div class="row mb-3">
-                    <div class="offset-sm-3 col-sm-3 d-grid">
-                        <button class="btn btn-primary" >Submit</button>
-                    </div>
-                    <div class="col-sm-3">
-                        <a class="btn btn-outline-primary" href="inventario.php">Cancelar</a>
-                    </div>
-                </div>
-
-                </form>
-            </div>
-
-            </div>
-        </div>
-    </div>
-</div> -->
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
 
 </body>
 </html>

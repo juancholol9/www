@@ -7,6 +7,7 @@
     $vol = "";
     $precioCaja = "";
     $precioUnidad = "";
+    $img = "";
 
     $errorMessage = "";
     $successMessage = "";
@@ -38,6 +39,7 @@
         $vol = $row["vol"];
         $precioCaja = $row["precioCaja"];
         $precioUnidad = $row["precioUnidad"];
+        $img = $row["img"];
 
     }else{
         //METODO POST: Actualiza los datos de la tabla
@@ -50,17 +52,18 @@
         $vol = $_POST["vol"];
         $precioCaja = $_POST["precioCaja"];
         $precioUnidad = $_POST["precioUnidad"];
+        $img = $_POST["img"];
 
         do{
             if(empty($id) || empty($sap) || empty($nombre) || empty($tipo) || empty($uxc) || empty($vol)
-            || empty($precioCaja) || empty($precioUnidad)){
+            || empty($precioCaja) || empty($precioUnidad) || empty($img)){
                 $errorMessage="Debe de llenar todos los campos";
                 break;
             }
 
             $sql = "UPDATE productos " .
-                    "SET `sap` = '$sap', `tipo` = '$tipo', `uxc` = '$uxc', `vol` = '$vol',
-                    `precioCaja` = '$precioCaja', `precioUnidad` = '$precioUnidad' " .
+                    "SET `sap` = '$sap', `nombre` = '$nombre', `tipo` = '$tipo', `uxc` = '$uxc', `vol` = '$vol',
+                    `precioCaja` = '$precioCaja', `precioUnidad` = '$precioUnidad', `img` = '$img' " .
                     "WHERE id = $id ";
 
             $result = $con->query($sql);
