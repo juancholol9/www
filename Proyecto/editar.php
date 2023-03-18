@@ -29,33 +29,54 @@ include "includes/editar.inc.php";
 
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-laber">Nombre</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
-                </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">SAP</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="sap" value="<?php echo $sap; ?>">
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-laber">Email</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
-                </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">Nombre</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="nombre" value="<?php echo $nombre; ?>">
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-laber">Phone</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="phone" value="<?php echo $phone; ?>">
-                </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">Tipo</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="tipo" value="<?php echo $tipo; ?>">
             </div>
+        </div>
 
-            <div class="row mb-3">
-                <label class="col-sm-3 col-form-laber">Address</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="address" value="<?php echo $address; ?>">
-                </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">UXC</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="uxc" value="<?php echo $uxc; ?>">
             </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">Vol</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="vol" value="<?php echo $vol; ?>">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">Precio Caja</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="precioCaja" value="<?php echo $precioCaja; ?>">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-laber">Precio Unidad</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="precioUnidad" value="<?php echo $precioUnidad; ?>">
+            </div>
+        </div>
 
             <?php
                 if(!empty($successMessage)){

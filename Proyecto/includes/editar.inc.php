@@ -1,10 +1,12 @@
 <?php
     include "includes/dbh.inc.php";
-    $id = "";
-    $name = "";
-    $email = "";
-    $phone = "";
-    $address = "";
+    $sap = "";
+    $nombre = "";
+    $tipo = "";
+    $uxc = "";
+    $vol = "";
+    $precioCaja = "";
+    $precioUnidad = "";
 
     $errorMessage = "";
     $successMessage = "";
@@ -29,28 +31,36 @@
             exit();
         }
 
-        $name = $row["name"];
-        $email = $row["email"];
-        $phone = $row["phone"];
-        $address = $row["address"];
+        $sap = $row["sap"];
+        $nombre = $row["nombre"];
+        $tipo = $row["tipo"];
+        $uxc = $row["uxc"];
+        $vol = $row["vol"];
+        $precioCaja = $row["precioCaja"];
+        $precioUnidad = $row["precioUnidad"];
 
     }else{
         //METODO POST: Actualiza los datos de la tabla
 
         $id = $_POST["id"];
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $address = $_POST["address"];
+        $sap = $_POST["sap"];
+        $nombre = $_POST["nombre"];
+        $tipo = $_POST["tipo"];
+        $uxc = $_POST["uxc"];
+        $vol = $_POST["vol"];
+        $precioCaja = $_POST["precioCaja"];
+        $precioUnidad = $_POST["precioUnidad"];
 
         do{
-            if(empty($id) || empty($name) || empty($email) || empty($phone) || empty($address)){
+            if(empty($id) || empty($sap) || empty($nombre) || empty($tipo) || empty($uxc) || empty($vol)
+            || empty($precioCaja) || empty($precioUnidad)){
                 $errorMessage="Debe de llenar todos los campos";
                 break;
             }
 
             $sql = "UPDATE productos " .
-                    "SET `name` = '$name', `email` = '$email', `phone` = '$phone', `address` = '$address' " .
+                    "SET `sap` = '$sap', `tipo` = '$tipo', `uxc` = '$uxc', `vol` = '$vol',
+                    `precioCaja` = '$precioCaja', `precioUnidad` = '$precioUnidad' " .
                     "WHERE id = $id ";
 
             $result = $con->query($sql);

@@ -22,12 +22,13 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Address</th>
-                    <th>Action</th>
+                    <th>SAP</th>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>UXC</th>
+                    <th>Vol</th>
+                    <th>Precio Caja</th>
+                    <th>Precio Unidad</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,11 +41,13 @@
                 while($row = mysqli_fetch_assoc($result)){
                     echo "
                     <tr>
-                    <td>$row[id]</td>
-                    <td>$row[name]</td>
-                    <td>$row[email]</td>
-                    <td>$row[phone]</td>
-                    <td>$row[address]</td>
+                    <td>$row[sap]</td>
+                    <td>$row[nombre]</td>
+                    <td>$row[tipo]</td>
+                    <td>$row[uxc]</td>
+                    <td>$row[vol]</td>
+                    <td>$row[precioCaja]</td>
+                    <td>$row[precioUnidad]</td>
                     <td>
                         <a class='btn btn-primary btn-sm' href='editar.php?id=$row[id]'>Editar</a>
                         <a class='btn btn-danger btn-sm' href='eliminar.php?id=$row[id]'>Eliminar</a>

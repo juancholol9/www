@@ -1,27 +1,35 @@
 <?php
     include "includes/dbh.inc.php";
-    $name = "";
-    $email = "";
-    $phone = "";
-    $address = "";
+    $sap = "";
+    $nombre = "";
+    $tipo = "";
+    $uxc = "";
+    $vol = "";
+    $precioCaja = "";
+    $precioUnidad = "";
+
     $errorMessage = "";
     $successMessage = "";
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $address = $_POST["address"];
+        $sap = $_POST["sap"];
+        $nombre = $_POST["nombre"];
+        $tipo = $_POST["tipo"];
+        $uxc = $_POST["uxc"];
+        $vol = $_POST["vol"];
+        $precioCaja = $_POST["precioCaja"];
+        $precioUnidad = $_POST["precioUnidad"];
 
         do{
-            if(empty($name) || empty($email) || empty($phone) || empty($address)){
+            if(empty($sap) || empty($nombre) || empty($tipo) || empty($uxc) || empty($vol)
+            || empty($precioCaja) || empty($precioUnidad)){
                 $errorMessage="Debe de llenar todos los campos";
                 break;
             }
 
             // insertar producto en la base de datos
-            $sql = "INSERT INTO productos (name, email, phone, address)" .
-                    "VALUES ('$name', '$email', '$phone', '$address')";
+            $sql = "INSERT INTO productos (sap, nombre, tipo, uxc, vol, precioCaja, precioUnidad)" .
+                    "VALUES ('$sap', '$nombre', '$tipo', '$uxc', '$vol', '$precioCaja', '$precioUnidad')";
             $result = $con->query($sql);
 
             if(!$result){
@@ -29,10 +37,14 @@
                 break;
             }
 
-            $name = "";
-            $email = "";
-            $phone = "";
-            $address = "";
+            $sap = "";
+            $nombre = "";
+            $tipo = "";
+            $uxc = "";
+            $vol = "";
+            $precioCaja = "";
+            $precioUnidad = "";
+
             $errorMessage = "";
 
             $successMessage = "Se añadio el producto exitosamente";
