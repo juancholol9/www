@@ -1,5 +1,6 @@
 <?php
     include "includes/dbh.inc.php";
+
     $sap = "";
     $nombre = "";
     $tipo = "";
