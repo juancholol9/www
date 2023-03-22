@@ -18,7 +18,6 @@
 </head>
 <body>
     <header>
-        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-gray">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarExample01">

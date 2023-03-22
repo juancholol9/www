@@ -5,7 +5,7 @@
 
 <div class="center container my-5">
     <div class="card pt-3" >
-            <p style="font-weight: bold; color: #0F6BB7; font-size: 22px;">Sumamos el IVA</p>
+            <p style="font-weight: bold; color: #0F6BB7; font-size: 22px;">Orden: Hlx983</p>
         <div class="container-fluid p-2">
 <table class="table">
 <thead>
