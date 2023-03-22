@@ -38,19 +38,18 @@
             <img src="img/<?php echo $carrito_mio[$i]['img']; ?>" alt="" width="100px">
 </td>
 <td style="vertical-align: middle;">
-    <form id="form2" name="form1" method="post">
+<form id="form2" name="form1" method="post" action="cart.php">
           <input name="id" type="hidden" id="id" value="<?php print $i;   ?>" class="align-middle" />
-          <input  name="cantidad" type="text" id="cantidad" style="width:50px;" class="align-middle text-center"   value="<?php print $carrito_mio[$i]['cantidad'];   ?>" size="1" maxlength="4"  />
-          <!-- <input  type="image" name="imageField3" src="img/actualizar.jpeg" width="40px" value="" class="btn btn-sm btn-primary btn-rounded" /> -->
-        </form>
-        <a href='index3_1.php'  type="image" src="img/actualizar.jpeg" width="40px"class="btn btn-sm btn-primary btn-rounded" />
+          <input  name="cantidad" type="text" id="cantidad" style="width:50px;" class="align-middle text-center"   value="3" size="1" maxlength="4"  />
+          <input  type="image" name="imageField3" src="img/actualizar.jpeg" width="40px" value="" class="btn btn-sm btn-primary btn-rounded" />
+          </form>
 </td>
 
 
 
 <td style="vertical-align: middle;"><?php echo $carrito_mio[$i]['nombre'] ?></td>
-<td style="vertical-align: middle;"><?php echo $carrito_mio[$i]['precioCaja'] ?>€</td>
-<td style="vertical-align: middle;"><?php echo $carrito_mio[$i]['precioCaja'] * $carrito_mio[$i]['cantidad']; ?>€</td>
+<td style="vertical-align: middle;">300€</td>
+<td style="vertical-align: middle;">300€</td>
 <td style="vertical-align: middle;">
 <form id="form3" name="form2" method="post" action="cart.php">
           <input name="id2" type="hidden" id="id2" value="<?php print $i;   ?>" />
@@ -75,21 +74,8 @@
 
 <li class="list-group-item d-flex justify-content-between">
 							<span  style="text-align: left; color: #000000;"><strong>Total (EUR)</strong></span>
-							<strong  style="text-align: left; color: #000000;"><?php
-							if(isset($_SESSION['carrito'])){
-							$total=0;
-							for($i=0;$i<=count($carrito_mio)-1;$i ++){
-                                if(isset($carrito_mio[$i])){
-							if($carrito_mio[$i]!=NULL){
-							$total=$total + ($carrito_mio[$i]['precioCaja'] * $carrito_mio[$i]['cantidad']);
-                            }
-							}}}
-                            if(!isset($total)){$total = '0';}else{ $total = $total;}
-							echo number_format($total, 2, ',', '.'); ?> €</strong>
+							<strong  style="text-align: left; color: #000000;">300€</strong>
 							</li>
-
-
-
             </div>
         </div>
 

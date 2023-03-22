@@ -69,7 +69,7 @@
                         <input name='vol' type='hidden' id='vol' value='$row[vol]' />
                         <input name='precioCaja' type='hidden' id='precioCaja' value=$row[precioCaja] />
                         <input name='precioUnidad' type='hidden' id='precioUnidad' value=$row[precioUnidad]/>
-                        <input name='cantidad' type='hidden' id='cantidad' value='1' class='pl-2' />
+                        <input name='cantidad' type='hidden' id='cantidad' value=1 class='pl-2' />
 
                     </form>";
                 }
