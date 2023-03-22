@@ -25,7 +25,7 @@
                         <img src="img/Champagne Bollinger Special Cuvée Brut.jpg" alt="" width="100px">
             </td>
 <td style="vertical-align: middle;">3</td>
-<td style="vertical-align: middle;">Cinzano Gran Dolce</td>
+<td style="vertical-align: middle;">Champagne Bollinger Special Cuvée Brut</td>
 <td style="vertical-align: middle;">300€</td>
 </tr>
 </tbody>

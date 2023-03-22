@@ -5,7 +5,7 @@
 
 <div class="center container my-5">
     <div class="card pt-3" >
-            <p style="font-weight: bold; color: #0F6BB7; font-size: 22px;">Sumamos el IVA</p>
+            <p style="font-weight: bold; color: #0F6BB7; font-size: 22px;">Orden: kOx123</p>
         <div class="container-fluid p-2">
 <table class="table">
 <thead>
@@ -25,7 +25,7 @@
                         <img src="img/Champagne Bollinger Special Cuvée Brut.jpg" alt="" width="100px">
             </td>
 <td style="vertical-align: middle;">3</td>
-<td style="vertical-align: middle;">Cinzano Gran Dolce</td>
+<td style="vertical-align: middle;">Champagne Bollinger Special Cuvée Brut</td>
 <td style="vertical-align: middle;">300€</td>
 </tr>
 </tbody>
@@ -51,6 +51,6 @@
             </div>
         </div>
 <br>
-        <a href="pedidoFinalizado.php" type="image" name="imageField3"class="btn-lg bg-success text-white " style="border:0px;" data-toggle="tooltip" data-placement="top"
-                title="Remove item"><i class="fas fa-trash-alt"></i> Finalizar Pedido
+<a href="inventario.php" type="image" name="imageField3"class="btn-lg bg-success text-white " style="border:0px;" data-toggle="tooltip" data-placement="top"
+                title="Remove item"><i class="fas fa-trash-alt"></i> Regresar al inventario
 </a>
