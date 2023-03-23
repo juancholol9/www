@@ -60,6 +60,16 @@
             </div>
         </div>
 <br>
-        <a href="inventario.php" type="image" name="imageField3"class="btn-lg bg-success text-white " style="border:0px;" data-toggle="tooltip" data-placement="top"
-                title="Remove item"><i class="fas fa-trash-alt"></i> Regresar al inventario
-</a>
+<div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <a href="inventario.php" type="image" name="imageField3"class="btn-lg bg-success text-white " style="border:0px;" data-toggle="tooltip" data-placement="top"
+                                title="Remove item"><i class="fas fa-trash-alt"></i> Regresar al inventario
+                </a>
+            </div>
+            <div class="col">
+                <a target="_blank" href="pdf/orden_PXx732.pdf" type="image" name="imageField3"class="btn-lg bg-warning text-white " style="border:0px;" data-toggle="tooltip" data-placement="top"
+                title="Remove item"><i class="fas fa-trash-alt"></i> Ver Factura PDF
+                </a>
+            </div>
+        </div>
